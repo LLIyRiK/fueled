@@ -1,0 +1,70 @@
+@import "../../../assets/stylesheets/vars";
+
+:host {
+  flex-shrink: 1;
+}
+
+.header{
+  padding:{
+    top:2.3rem;
+    left:3rem;
+    right:3rem;
+    bottom:2.4rem;
+  }
+  background-color: $red;
+}
+
+.logo{
+  &__txt-thin, &__txt-bold{
+    color: $white;
+    font:{
+      size: 1.8rem;
+      family: $base-ff;
+    }
+    text-transform: uppercase;
+  }
+  &__txt-thin{
+    font-weight: $fw-n;
+  }
+  &__txt-bold{
+    font:{
+      weight: $fw-b;
+      size:1.7rem;
+    }
+  }
+}
+
+.cart{
+  &-link{
+    font:{
+      size: 1.6rem;
+      weight: $fw-n;
+      family: $base-ff;
+    }
+    margin-right:.5rem;
+    color:$white;
+  }
+  &-items{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__counter{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      border-radius: 50%;
+      padding:.3rem;
+      min-width:2.3rem;
+      min-height: 2.3rem;
+      font:{
+        size: 1.6rem;
+        family: $base-ff;
+        weight: $fw-b;
+      }
+      line-height: 1;
+      color: $black;
+      box-sizing: border-box;
+    }
+  }
+}

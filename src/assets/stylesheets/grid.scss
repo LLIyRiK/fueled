@@ -1,0 +1,47 @@
+.container{
+  max-width: 100%;
+  padding-right: $columnsGutter;
+  padding-left: $columnsGutter;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin:{
+    left:-$columnsGutter;
+    right:-$columnsGutter;
+  }
+}
+
+[class^="col"]{
+  padding:{
+    left:$columnsGutter;
+    right:$columnsGutter;
+  }
+  box-sizing: border-box;
+}
+
+@for $i from 1 through $columnsNumber{
+  .col-#{$i}{
+    flex: 0 0 $i/$columnsNumber*100%;
+    max-width: $i / $columnsNumber*100%;
+  }
+}
+
+.col-auto{
+  flex: 0 0 auto;
+  max-width:100%;
+}
+.justify-content-between{
+  justify-content: space-between!important;
+}
+
+.pl-0{
+  padding-left: 0!important;
+}
+
+.pr-0{
+  padding-right: 0!important;
+}

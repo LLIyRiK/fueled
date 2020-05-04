@@ -1,0 +1,9 @@
+// Column generator
+@mixin columnGenerator($columnsNumber, $columnWidth: 100%, $breakpoint:0px) {
+  .col-#{$breakpoint}#{$columnWidth} {
+    @media(min-width: $breakpoint) {
+      flex: 0 0 $columnWidth/$columnsNumber;
+      max-width:$columnWidth/$columnsNumber;
+    }
+  }
+}

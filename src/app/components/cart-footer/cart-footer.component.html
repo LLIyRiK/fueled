@@ -1,0 +1,41 @@
+<div class="page-content__wrap">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-4 pl-0">
+        <div class="form-field__wrap">
+          <label class="form-field__label" for="addComments">Additional comments</label>
+          <textarea class="form-field__control" name="addComments" id="addComments" cols="30" rows="10" [(ngModel)]="comments"></textarea>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="page__item">
+          <div class="page__item-title">Delivery info</div>
+          <div class="page__item-content">All orders will be sent by Special Delivery, which will be insured and will need to be signed for.
+            <br> Allow 4-6 weeks for delivery.</div>
+        </div>
+      </div>
+      <div class="col-auto pr-0">
+        <div class="cart-summary">
+          <div class="cart-summary__row">
+            <div class="cart-summary__label">Sub total</div>
+            <div class="cart-summary__value">{{ subTotal | currency:'$':'symbol':'1.0-2' }}</div>
+          </div>
+          <div class="cart-summary__row">
+            <div class="cart-summary__label">Tax</div>
+            <div class="cart-summary__value">{{ tax | currency:'$':'symbol':'1.0-2' }}</div>
+          </div>
+          <div class="cart-summary__row cart-summary__row--total">
+            <div class="cart-summary__label">Total</div>
+            <div class="cart-summary__value">{{ total | currency:'$':'symbol':'1.0-2' }}</div>
+          </div>
+          <div class="cart-summary__footer">
+            <button class="btn-primary" (click)="checkout()">Checkout</button>
+            <span class="secondary-link">
+              <span>or</span>&nbsp;<a class="cart-link">Continue shopping</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
